@@ -1,0 +1,52 @@
+.container h2{
+  margin-bottom: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#preview img{
+  border: solid gray 1px;
+  -webkit-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
+}
+
+#footer{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+#btnDownload{
+  margin-top: 20px;
+}
+
+.btn-primary{
+  background-color: #ee7600;
+  border: solid 1px #ee7600;
+}
+
+.btn:focus, .btn-primary:hover, .btn-primary:active, .btn-primary.focus{
+  background-color: white !important;
+  color: #ee7600 !important;
+  border: solid 1px #ee7600 !important;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scribus web service demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2><img style="margin-right: 20px;" src="{{ url_for('static', filename='img/logo.png') }}" />Scribus web service demo</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <!-- document preview -->
+        <div id="preview"></div>
+      </div>
+      <div class="col-md-8">
+        <form id="frmDocument" enctype="multipart/form-data">
+          <!-- title -->
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+          </div>
+
+          <!-- image -->
+          <div class="form-group">
+            <label for="title">Feature image</label><br />
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-file">
+                      <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+ Browse&hellip; <input type="file" name="image">
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+          </div>
+
+          <!-- body text -->
+          <div class="form-group">
+            <label for="body">Text</label>
+            <textarea class="form-control" id="text" name="text" rows="9"></textarea>
+          </div>
+
+          <!-- Template select and button generate -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-3">
+                <select id="template" name="template" class="form-control">
+                </select>
+              </div>
+              <div class="col-xs-3">
+                <button id="btnGenerate" type="button" class="btn btn-primary ready">
+                  <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Generate document
+                </button>
+              </div>
+              <div class="col-xs-4">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="footer">Developed by Glenn De Backer</div>
+</body>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</html>

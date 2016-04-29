@@ -1,0 +1,2 @@
+rm jobs/*
+rm pdf/*
